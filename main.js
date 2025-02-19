@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo(0, 0); // Scroll to the top of the page on load
+    document.body.style.overflow = 'hidden'; // Lock user to hero section on load
 });
 
 document.querySelector('.hero-text').addEventListener('mouseover', function() {
@@ -42,7 +43,7 @@ document.querySelector('.fa-regular.fa-compass').addEventListener('click', funct
     setTimeout(() => {
         document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
         setTimeout(() => {
-            document.body.style.overflow = 'auto'; // Enable scrolling
+            document.body.style.overflow = 'auto'; // Enable scrolling after transition
             transitionOverlay.remove();
         }, 1000); // Duration of the fade effect
     }, 2000); // Duration of the transition
