@@ -45,6 +45,6 @@ document.querySelector('.fa-regular.fa-compass').addEventListener('click', funct
         setTimeout(() => {
             document.body.style.overflow = 'auto'; // Enable scrolling after transition
             transitionOverlay.remove();
-        }, 1000); // Duration of the fade effect
-    }, 2000); // Duration of the transition
+        }, 500); // Duration of the fade effect
+    }, 1000); // Duration of the transition
 });

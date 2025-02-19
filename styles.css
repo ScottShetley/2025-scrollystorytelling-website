@@ -145,7 +145,7 @@ button:hover {
     pointer-events: none;
     transform: translateX(100%) scale(1.2);
     filter: blur(10px);
-    transition: transform 2s ease, opacity 2s ease, filter 2s ease; /* Slower transition */
+    transition: transform 1s ease, opacity 1s ease, filter 1s ease; /* Faster transition */
 }
 
 .full-screen-transition.active {
