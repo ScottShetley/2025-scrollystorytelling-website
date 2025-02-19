@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0); // Scroll to the top of the page on load
+});
+
 document.querySelector('.hero-text').addEventListener('mouseover', function() {
     const hero = document.querySelector('.hero');
     const heroText = document.querySelector('.hero-text');
@@ -36,8 +40,10 @@ document.querySelector('.fa-regular.fa-compass').addEventListener('click', funct
     }, 10);
 
     setTimeout(() => {
-        document.body.style.overflow = 'auto'; // Enable scrolling
-        transitionOverlay.remove();
         document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
-    }, 1000); // Duration of the transition
+        setTimeout(() => {
+            document.body.style.overflow = 'auto'; // Enable scrolling
+            transitionOverlay.remove();
+        }, 1000); // Duration of the fade effect
+    }, 2000); // Duration of the transition
 });
