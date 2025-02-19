@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #3F576C;
+    --secondary-color: #CECBBD;
+    --tertiary-color: #DDD6C7;
+    --accent-color: #888D88;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: white; /* Set all text to white by default */
+}
+
+main {
+    padding: 1em;
+    background-color: var(--tertiary-color);
+    color: white; /* Ensure text in main is white */
+}
+
+button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white; /* Ensure button text is white */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/11.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    transform: scale(1.5); /* Start more zoomed in */
+    transition: filter 1.5s ease-out, transform 1.5s ease-out; /* Faster transition */
+    z-index: -1;
+}
+
+.hero.focused::before {
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em; /* Increase font size by 5 times */
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    animation: textFlash 1.7s infinite;
+    transition: opacity 0.5s ease-out; /* Add transition for smooth hiding */
+}
+
+.hero-text.hidden {
+    opacity: 0;
+    transition: opacity 0.1s ease-out; /* Faster transition for hiding */
+}
+
+.hero-text.hidden-complete {
+    display: none;
+}
+
+@keyframes textFlash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.flash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(254, 255, 242, 0.8) 0%, rgba(255,255,255,0) 70%); /* Less intense color */
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.09s ease-out, width 0.09s ease-out, height 0.09s ease-out; /* Adjusted flash speed */
+}
+
+.hero.flash-active .flash {
+    opacity: 1;
+    width: 2000px; /* Increase size */
+    height: 2000px; /* Increase size */
+}
+
+.full-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    color: var(--primary-color);
+}
+
+#about-me {
+    background-color: var(--secondary-color);
+}
+
+#toolkit {
+    background-color: var(--tertiary-color);
+}
+
+#photography-portfolio {
+    background-color: var(--accent-color);
+}
+
+#design-portfolio {
+    background-color: var(--secondary-color);
+}
+
+#coding-portfolio {
+    background-color: var(--tertiary-color);
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 3em; /* Adjust font size for smaller screens */
+    }
+
+    .full-screen {
+        padding: 1em;
+    }
+}
