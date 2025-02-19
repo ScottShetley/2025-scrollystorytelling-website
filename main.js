@@ -13,10 +13,31 @@ document.querySelector('.hero-text').addEventListener('mouseover', function() {
             hero.classList.add('focused');
             flash.remove();
             heroText.classList.add('hidden-complete'); // Remove text after transition
+
+            // Show the compass icon after 3 seconds
+            setTimeout(() => {
+                document.querySelector('.fa-regular.fa-compass').style.opacity = '1';
+            }, 3000);
         }, 90); // Flash duration set to 90ms
     }
 });
 
 document.getElementById('myButton').addEventListener('click', function() {
     alert('Button was clicked!');
+});
+
+document.querySelector('.fa-regular.fa-compass').addEventListener('click', function() {
+    const transitionOverlay = document.createElement('div');
+    transitionOverlay.classList.add('full-screen-transition');
+    document.body.appendChild(transitionOverlay);
+
+    setTimeout(() => {
+        transitionOverlay.classList.add('active');
+    }, 10);
+
+    setTimeout(() => {
+        document.body.style.overflow = 'auto'; // Enable scrolling
+        transitionOverlay.remove();
+        document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
+    }, 1000); // Duration of the transition
 });
