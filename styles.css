@@ -168,18 +168,24 @@ button:hover {
 
 #about-me {
     background-color: var(--secondary-color);
-    padding: 2em;
+    padding: 0; /* Remove padding to make the image cover the entire section */
     display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
+    height: 100vh; /* Ensure the section takes up the full viewport height */
+    width: 100vw; /* Ensure the section takes up the full viewport width */
+    overflow: hidden; /* Ensure no overflow */
 }
 
 #about-me .profile-photo {
-    max-width: 80%; /* Increase the maximum width for the image */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid var(--primary-color); /* Subtle border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-radius: 8px; /* Slightly rounded corners */
+    width: 100%; /* Make the image take up the full width of the section */
+    height: 100%; /* Make the image take up the full height of the section */
+    object-fit: cover; /* Ensure the image covers the entire section without distortion */
+    border: none; /* Remove the border */
+    box-shadow: none; /* Remove the shadow */
+    border-radius: 0; /* Remove the rounded corners */
+    padding: 0; /* Remove the padding */
+    margin: 0; /* Remove any margin */
 }
 
 #about-me .text-container {
