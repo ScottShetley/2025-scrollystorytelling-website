@@ -245,7 +245,7 @@ button:hover {
     align-items: center; /* Center the content horizontally */
     height: 100vh; /* Ensure the section takes up the full viewport height */
     border: none; /* Remove the original border */
-    border-radius: 10px; /* Add rounded corners */
+    border-radius: 0; /* Change border radius to 0 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better distinction */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
