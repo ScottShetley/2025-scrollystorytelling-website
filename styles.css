@@ -367,19 +367,22 @@ button:hover {
 
 #photography-portfolio {
     background-color: var(--accent-color);
-    padding: 20px;
+    padding: 80px 20px; /* Increase padding to make the section larger */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 40px; /* Keep the margin as is */
+    height: auto; /* Allow the height to adjust based on content */
+    min-height: 100vh; /* Ensure the section takes up at least the full viewport height */
 }
 
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Create 6 equal columns */
+    grid-template-columns: repeat(12, 1fr); /* Keep the grid as it currently is */
     grid-gap: 10px; /* Add gap between grid items */
-    width: 100%;
-    max-width: 1200px; /* Limit the maximum width */
+    width: calc(100% - 40px); /* Ensure the grid takes up the full width minus padding */
+    max-width: 1800px; /* Increase the maximum width */
     margin: 0 auto; /* Center the grid */
 }
 
@@ -399,21 +402,21 @@ button:hover {
 }
 
 /* Define different sizes for the grid items */
-.item1 { grid-column: span 2; grid-row: span 2; }
-.item2 { grid-column: span 1; grid-row: span 1; }
-.item3 { grid-column: span 1; grid-row: span 2; }
-.item4 { grid-column: span 2; grid-row: span 1; }
-.item5 { grid-column: span 1; grid-row: span 1; }
-.item6 { grid-column: span 1; grid-row: span 1; }
-.item7 { grid-column: span 2; grid-row: span 2; }
-.item8 { grid-column: span 1; grid-row: span 1; }
-.item9 { grid-column: span 1; grid-row: span 1; }
-.item10 { grid-column: span 2; grid-row: span 1; }
-.item11 { grid-column: span 1; grid-row: span 2; }
-.item12 { grid-column: span 1; grid-row: span 1; }
-.item13 { grid-column: span 2; grid-row: span 2; }
-.item14 { grid-column: span 1; grid-row: span 1; }
-.item15 { grid-column: span 1; grid-row: span 1; }
+.item1 { grid-column: span 3; grid-row: span 2; }
+.item2 { grid-column: span 2; grid-row: span 1; }
+.item3 { grid-column: span 2; grid-row: span 2; }
+.item4 { grid-column: span 3; grid-row: span 1; }
+.item5 { grid-column: span 2; grid-row: span 1; }
+.item6 { grid-column: span 2; grid-row: span 1; }
+.item7 { grid-column: span 3; grid-row: span 2; }
+.item8 { grid-column: span 2; grid-row: span 1; }
+.item9 { grid-column: span 2; grid-row: span 1; }
+.item10 { grid-column: span 3; grid-row: span 1; }
+.item11 { grid-column: span 2; grid-row: span 2; }
+.item12 { grid-column: span 2; grid-row: span 1; }
+.item13 { grid-column: span 3; grid-row: span 2; }
+.item14 { grid-column: span 2; grid-row: span 1; }
+.item15 { grid-column: span 2; grid-row: span 1; }
 
 #design-portfolio {
     background-color: var(--secondary-color);
