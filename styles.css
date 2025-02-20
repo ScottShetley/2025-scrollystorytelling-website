@@ -175,6 +175,7 @@ button:hover {
     height: 100vh; /* Ensure the section takes up the full viewport height */
     width: 100vw; /* Ensure the section takes up the full viewport width */
     overflow: hidden; /* Ensure no overflow */
+    position: relative; /* Ensure the text is positioned correctly */
 }
 
 #about-me .profile-photo {
@@ -187,6 +188,29 @@ button:hover {
     border-radius: 0; /* Remove the rounded corners */
     padding: 0; /* Remove the padding */
     margin: 0; /* Remove any margin */
+}
+
+.about-me-text {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* Add padding from the left side */
+    transform: translateY(-50%); /* Center the text vertically */
+    color: var(--primary-color); /* Change text color to primary blue */
+    font-size: 1.5em;
+    text-align: left;
+    max-width: 40%; /* Ensure the text doesn't take up too much space */
+    font-family: 'Shadows Into Light', cursive; /* Apply the Shadows Into Light font */
+    font-weight: bold; /* Make the text bold */
+}
+
+.about-me-text span {
+    display: inline; /* Ensure spans are displayed inline */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.about-me-text span.visible {
+    opacity: 1;
 }
 
 /* Media query for smaller screens */
