@@ -1,0 +1,24 @@
+{
+  "name": "2025-scrollytelling-website",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScottShetley/2025-scrollystorytelling-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScottShetley/2025-scrollystorytelling-website/issues"
+  },
+  "homepage": "https://github.com/ScottShetley/2025-scrollystorytelling-website#readme",
+  "description": "",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "jquery": "^3.7.1"
+  }
+}
