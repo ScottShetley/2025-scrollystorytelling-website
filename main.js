@@ -7,23 +7,17 @@ document.querySelector('.hero-text').addEventListener('mouseover', function() {
     const hero = document.querySelector('.hero');
     const heroText = document.querySelector('.hero-text');
     if (!hero.classList.contains('focused')) { // Ensure flash happens only once
-        const flash = document.createElement('div');
-        flash.classList.add('flash');
-        hero.appendChild(flash);
-        hero.classList.add('flash-active');
+        hero.classList.add('focused');
         heroText.classList.add('hidden'); // Hide the text
 
         setTimeout(() => {
-            hero.classList.remove('flash-active');
-            hero.classList.add('focused');
-            flash.remove();
             heroText.classList.add('hidden-complete'); // Remove text after transition
 
             // Show the compass icon after 3 seconds
             setTimeout(() => {
                 document.querySelector('.fa-regular.fa-compass').style.opacity = '1';
             }, 3000);
-        }, 90); // Flash duration set to 90ms
+        }, 90); // Duration set to 90ms
     }
 });
 
@@ -45,6 +39,17 @@ document.querySelector('.fa-regular.fa-compass').addEventListener('click', funct
         setTimeout(() => {
             document.body.style.overflow = 'auto'; // Enable scrolling after transition
             transitionOverlay.remove();
+
+            // Trigger the fade-in effect for the bio paragraph
+            const bio = document.querySelector('#about-me .bio');
+            const sentences = bio.innerText.split('. ');
+            bio.innerHTML = sentences.map(sentence => `<span>${sentence}.</span>`).join(' ');
+            const spans = bio.querySelectorAll('span');
+            spans.forEach((span, index) => {
+                setTimeout(() => {
+                    span.classList.add('visible');
+                }, index * 1000); // Fade in each sentence one by one
+            });
         }, 500); // Duration of the fade effect
     }, 500); // Duration of the transition
 });

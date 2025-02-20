@@ -167,6 +167,46 @@ button:hover {
 
 #about-me {
     background-color: var(--secondary-color);
+    padding: 2em;
+    text-align: center;
+}
+
+#about-me .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Desaturated */
+    margin-bottom: 1em;
+}
+
+#about-me .name {
+    font-family: 'Arial', sans-serif; /* Clean font */
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 1em;
+}
+
+#about-me .bio {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#about-me .bio.visible {
+    opacity: 1;
+}
+
+#about-me .bio span {
+    opacity: 0;
+    display: inline-block;
+    transition: opacity 1s ease-in-out;
+}
+
+#about-me .bio span.visible {
+    opacity: 1;
 }
 
 #toolkit {
