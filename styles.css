@@ -217,6 +217,14 @@ button:hover {
     opacity: 1;
 }
 
+.about-me-name {
+    font-family: Arial, sans-serif; /* Use a nice sans-serif font */
+    font-size: 2em; /* Adjust the font size */
+    color: var(--primary-color); /* Use the primary color */
+    margin-bottom: 20px; /* Add some space below the name */
+    text-align: center; /* Center the name */
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     #about-me .profile-photo {
