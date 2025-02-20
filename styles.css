@@ -237,7 +237,132 @@ button:hover {
 }
 
 #toolkit {
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color); /* Change background color to tan */
+    padding: 20px; /* Add padding to the section */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Distribute space between the areas */
+    align-items: center; /* Center the content horizontally */
+    height: 100vh; /* Ensure the section takes up the full viewport height */
+    border: none; /* Remove the original border */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better distinction */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#toolkit .content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between the left and right areas */
+    width: 100%; /* Ensure the content takes up the full width */
+    height: calc(100% - 60px); /* Ensure the content takes up the full height minus the padding and margin */
+}
+
+#toolkit .left-area {
+    width: 48%; /* Ensure the left area takes up 48% of the section width */
+    height: 100%; /* Ensure the left area takes up the full height */
+    border: 5px solid var(--primary-color); /* Add a border to the left area */
+    border-radius: 10px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 20px; /* Add padding to the left area */
+    background-color: var(--secondary-color); /* Add background color to the left area */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+}
+
+#toolkit .right-area {
+    width: 48%; /* Ensure the right area takes up 48% of the section width */
+    height: 100%; /* Ensure the right area takes up the full height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Distribute space between the top and bottom areas */
+}
+
+#toolkit .top-right-area,
+#toolkit .bottom-right-area {
+    width: 100%; /* Ensure each area takes up the full width */
+    height: 48%; /* Ensure each area takes up 48% of the height */
+    border: 5px solid var(--primary-color); /* Add a border to each area */
+    border-radius: 10px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 20px; /* Add padding to each area */
+    background-color: var(--secondary-color); /* Add background color to each area */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Add some space below each right area */
+}
+
+#toolkit .left-area h2,
+#toolkit .top-right-area h2,
+#toolkit .bottom-right-area h2 {
+    margin-bottom: 20px; /* Add some space below the headings */
+}
+
+#toolkit .left-area iframe,
+#toolkit .top-right-area iframe,
+#toolkit .bottom-right-area iframe {
+    border: none; /* Remove the border from the iframe */
+    width: 100%; /* Ensure the iframe takes up the full width */
+    height: 100%; /* Ensure the iframe takes up the full height */
+}
+
+#toolkit .download-button {
+    width: 100%; /* Ensure the button area takes up the full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
+    margin-top: 20px; /* Add some space above the button */
+    margin-bottom: 20px; /* Adjust this value to control the height from the bottom */
+}
+
+#toolkit .download-button .button {
+    font-size: 1.2em; /* Adjust the font size */
+    color: var(--primary-color); /* Use the primary color for the button text */
+    text-decoration: none; /* Remove underline from the button text */
+    border: 2px solid var(--primary-color); /* Add a border to the button */
+    padding: 10px 20px; /* Add padding to the button */
+    border-radius: 5px; /* Add rounded corners to the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for hover effect */
+}
+
+#toolkit .download-button .button:hover {
+    background-color: var(--primary-color); /* Change background color on hover */
+    color: var(--secondary-color); /* Change text color on hover */
+}
+
+#toolkit .docx-area {
+    width: 100%; /* Ensure the docx area takes up the full width */
+    height: 10%; /* Ensure the docx area takes up 10% of the height */
+    border: 5px solid var(--primary-color); /* Add a border to the docx area */
+    border-radius: 10px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 20px; /* Add padding to the docx area */
+    background-color: var(--secondary-color); /* Add background color to the docx area */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+}
+
+#toolkit .docx-area a {
+    font-size: 1.2em; /* Adjust the font size */
+    color: var(--primary-color); /* Use the primary color for links */
+    text-decoration: none; /* Remove underline from links */
+    border: 2px solid var(--primary-color); /* Add a border to the links */
+    padding: 10px 20px; /* Add padding to the links */
+    border-radius: 5px; /* Add rounded corners to the links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for hover effect */
+}
+
+#toolkit .docx-area a:hover {
+    background-color: var(--primary-color); /* Change background color on hover */
+    color: var(--secondary-color); /* Change text color on hover */
 }
 
 #photography-portfolio {
