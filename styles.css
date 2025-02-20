@@ -169,11 +169,24 @@ button:hover {
 #about-me {
     background-color: var(--secondary-color);
     padding: 2em;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
 }
 
 #about-me .profile-photo {
-    display: none; /* Hide the profile photo */
+    max-width: 80%; /* Increase the maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid var(--primary-color); /* Subtle border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+#about-me .text-container {
+    flex: 1; /* Allow the text container to take up remaining space */
+    text-align: center; /* Align text to the right */
+    padding-left: 2em; /* Space between the image and text */
+    align-self: center; /* Center the text container vertically */
 }
 
 #about-me .name {
