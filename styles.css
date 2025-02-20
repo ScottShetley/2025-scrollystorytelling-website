@@ -181,6 +181,7 @@ button:hover {
     width: 100%; /* Make the image take up the full width of the section */
     height: 100%; /* Make the image take up the full height of the section */
     object-fit: cover; /* Ensure the image covers the entire section without distortion */
+    object-position: center; /* Default position for larger screens */
     border: none; /* Remove the border */
     box-shadow: none; /* Remove the shadow */
     border-radius: 0; /* Remove the rounded corners */
@@ -188,40 +189,15 @@ button:hover {
     margin: 0; /* Remove any margin */
 }
 
-#about-me .text-container {
-    flex: 1; /* Allow the text container to take up remaining space */
-    text-align: center; /* Align text to the right */
-    padding-left: 2em; /* Space between the image and text */
-    align-self: center; /* Center the text container vertically */
-}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #about-me .profile-photo {
+        object-position: 83% center; /* Adjust the position to show the desired part of the image */
+    }
 
-#about-me .name {
-    font-family: 'Arial', sans-serif; /* Clean font */
-    font-size: 2em;
-    color: var(--primary-color);
-    margin-bottom: 1em;
-}
-
-#about-me .bio {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.2em;
-    color: var(--primary-color);
-    opacity: 1; /* Remove fade-in effect */
-    transition: none; /* Remove transition effect */
-}
-
-#about-me .bio.visible {
-    opacity: 1;
-}
-
-#about-me .bio span {
-    opacity: 0;
-    display: inline-block;
-    transition: opacity 1s ease-in-out;
-}
-
-#about-me .bio span.visible {
-    opacity: 1;
+    .compass-icon {
+        top: calc(50% + 1.5in); /* Adjust the top position to move the icon higher */
+    }
 }
 
 #toolkit {
