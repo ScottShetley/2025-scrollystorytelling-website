@@ -24,7 +24,13 @@ document.getElementById('myButton').addEventListener('click', function() {
     alert('Button was clicked!');
 });
 
-document.querySelector('.fa-regular.fa-compass').addEventListener('click', function() {
+let transitionTriggered = false; // Flag to track if the transition has been triggered
+
+function triggerTransition() {
+    if (transitionTriggered) return; // Prevent the transition if it has already been triggered
+
+    transitionTriggered = true; // Set the flag to true to indicate the transition has been triggered
+
     const transitionOverlay = document.createElement('div');
     transitionOverlay.classList.add('full-screen-transition');
     document.body.appendChild(transitionOverlay);
@@ -50,4 +56,12 @@ document.querySelector('.fa-regular.fa-compass').addEventListener('click', funct
             });
         }, 500); // Duration of the fade effect
     }, 500); // Duration of the transition
+}
+
+document.querySelector('.fa-regular.fa-compass').addEventListener('click', triggerTransition);
+
+window.addEventListener('scroll', function() {
+    if (!transitionTriggered) {
+        triggerTransition(); // Trigger the transition as soon as the user starts scrolling
+    }
 });
