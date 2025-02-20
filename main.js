@@ -43,17 +43,6 @@ function triggerTransition() {
         document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
         setTimeout(() => {
             transitionOverlay.remove();
-
-            // Trigger the fade-in effect for the bio paragraph
-            const bio = document.querySelector('#about-me .bio');
-            const sentences = bio.innerText.split('. ');
-            bio.innerHTML = sentences.map(sentence => `<span>${sentence}.</span>`).join(' ');
-            const spans = bio.querySelectorAll('span');
-            spans.forEach((span, index) => {
-                setTimeout(() => {
-                    span.classList.add('visible');
-                }, index * 1000); // Fade in each sentence one by one
-            });
         }, 500); // Duration of the fade effect
     }, 500); // Duration of the transition
 }
