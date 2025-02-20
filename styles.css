@@ -168,14 +168,18 @@ button:hover {
 
 #about-me {
     background-color: var(--secondary-color);
-    padding: 0; /* Remove padding to make the image cover the entire section */
+    padding: 20px; /* Add padding to the section */
     display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
     height: 100vh; /* Ensure the section takes up the full viewport height */
-    width: 100vw; /* Ensure the section takes up the full viewport width */
+    width: calc(100% - 40px); /* Ensure the section takes up the full viewport width minus padding */
+    margin: 0 auto; /* Center the section horizontally */
     overflow: hidden; /* Ensure no overflow */
     position: relative; /* Ensure the text is positioned correctly */
+    border: 5px solid var(--primary-color); /* Add a border to distinguish the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better distinction */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 #about-me .profile-photo {
