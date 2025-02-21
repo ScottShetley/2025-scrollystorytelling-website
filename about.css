@@ -1,0 +1,83 @@
+.full-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    color: var(--primary-color);
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#about-me {
+    background-color: var(--secondary-color);
+    padding: 20px; /* Add padding to the section */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    height: 100vh; /* Ensure the section takes up the full viewport height */
+    width: calc(100% - 40px); /* Ensure the section takes up the full viewport width minus padding */
+    margin: 0 auto; /* Center the section horizontally */
+    overflow: hidden; /* Ensure no overflow */
+    position: relative; /* Ensure the text is positioned correctly */
+    border: 5px solid var(--primary-color); /* Add a border to distinguish the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better distinction */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#about-me .profile-photo {
+    width: 100%; /* Make the image take up the full width of the section */
+    height: 100%; /* Make the image take up the full height of the section */
+    object-fit: cover; /* Ensure the image covers the entire section without distortion */
+    object-position: center; /* Default position for larger screens */
+    border: none; /* Remove the border */
+    box-shadow: none; /* Remove the shadow */
+    border-radius: 0; /* Remove the rounded corners */
+    padding: 0; /* Remove the padding */
+    margin: 0; /* Remove any margin */
+}
+
+.about-me-text {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* Add padding from the left side */
+    transform: translateY(-50%); /* Center the text vertically */
+    color: var(--primary-color); /* Change text color to primary blue */
+    font-size: 1.5em;
+    text-align: left;
+    max-width: 40%; /* Ensure the text doesn't take up too much space */
+    font-family: 'Shadows Into Light', cursive; /* Apply the Shadows Into Light font */
+    font-weight: bold; /* Make the text bold */
+}
+
+.about-me-text span {
+    display: inline; /* Ensure spans are displayed inline */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.about-me-text span.visible {
+    opacity: 1;
+}
+
+.about-me-name {
+    font-family: Arial, sans-serif; /* Use a nice sans-serif font */
+    font-size: 2em; /* Adjust the font size */
+    color: var(--primary-color); /* Use the primary color */
+    margin-bottom: 20px; /* Add some space below the name */
+    text-align: center; /* Center the name */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #about-me .profile-photo {
+        object-position: 83% center; /* Adjust the position to show the desired part of the image */
+    }
+}

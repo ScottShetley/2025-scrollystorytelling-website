@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Website</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="design-portfolio.css">
+    <link rel="stylesheet" href="toolkit.css">
+    <link rel="stylesheet" href="photography-portfolio.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
@@ -68,17 +74,25 @@
         </div>
     </section>
     <section id="design-portfolio" class="full-screen">
-        <h2>Design Portfolio</h2>
-        <p>Content for design portfolio...</p>
+        <h2 class="centered-title">Design Portfolio</h2>
+        <div class="reverse-bento-grid">
+            <div class="reverse-bento-item item1"><img src="images/19.png" alt="Design 1"></div>
+            <div class="reverse-bento-item item2"><img src="images/20.jpg" alt="Design 2"></div>
+            <div class="reverse-bento-item item3"><img src="images/21.png" alt="Design 3"></div>
+            <div class="reverse-bento-item item4"><img src="images/22.png" alt="Design 4"></div>
+            <div class="reverse-bento-item item5"><img src="images/23.png" alt="Design 5"></div>
+            <div class="reverse-bento-item item6"><img src="images/24.png" alt="Design 6"></div>
+            <div class="reverse-bento-item item7"><img src="images/25.png" alt="Design 7"></div>
+            <div class="reverse-bento-item item8"><img src="images/26.png" alt="Design 8"></div>
+            <div class="reverse-bento-item item9"><img src="images/27.png" alt="Design 9"></div>
+        </div>
+      
     </section>
     <section id="coding-portfolio" class="full-screen">
         <h2>Coding Portfolio</h2>
         <p>Content for coding portfolio...</p>
     </section>
-    <main>
-        <p>This is a simple website to demonstrate basic HTML, CSS, and JavaScript.</p>
-        <button id="myButton">Click Me</button>
-    </main>
+    
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
     <script>
@@ -86,6 +100,8 @@
             $('[data-fancybox="gallery"]').fancybox();
         });
     </script>
+    <script src="hero.js"></script>
+    <script src="about-me.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

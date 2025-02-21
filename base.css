@@ -1,24 +1,36 @@
-
-.full-screen-transition {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(100%) scale(1.2);
-    filter: blur(10px);
-    transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease; /* Faster transition */
+:root {
+    --primary-color: #3F576C;
+    --secondary-color: #CECBBD;
+    --tertiary-color: #DDD6C7;
+    --accent-color: #888D88;
 }
 
-.full-screen-transition.active {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
-    pointer-events: all;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: white; /* Set all text to white by default */
+}
+
+main {
+    padding: 1em;
+    background-color: var(--tertiary-color);
+    color: white; /* Ensure text in main is white */
+}
+
+button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white; /* Ensure button text is white */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
 }
 
 .full-screen {
@@ -56,7 +68,3 @@
         padding: 1em;
     }
 }
-
-    .compass-icon {
-        top: calc(50% + 1.5in); /* Adjust the top position to move the icon higher */
-    }
