@@ -1,0 +1,25 @@
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: url('../images/11.jpg') no-repeat center center/cover; /* Ensure the correct path to the image */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure child elements are contained */
+}
+.hero-text {
+    font-size: 5em; /* Increase the font size */
+    font-family: 'Shadows Into Light', cursive;
+    opacity: 1; /* Initially visible */
+    cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+    z-index: 1; /* Ensure text is above the background */
+}
+
+
+
+
+
+
+
