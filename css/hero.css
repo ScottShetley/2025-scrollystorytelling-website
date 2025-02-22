@@ -17,7 +17,12 @@
     z-index: 1; /* Ensure text is above the background */
 }
 
-
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .hero-text {
+        font-size: 5em; /* Larger font size for tablets and desktops */
+    }
+}
 
 
 

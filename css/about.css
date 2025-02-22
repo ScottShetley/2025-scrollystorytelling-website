@@ -81,3 +81,10 @@
         object-position: 83% center; /* Adjust the position to show the desired part of the image */
     }
 }
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .about-me-name {
+        font-size: 2.5em;
+    }
+}
