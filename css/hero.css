@@ -9,18 +9,31 @@
     align-items: center;
     overflow: hidden; /* Ensure child elements are contained */
 }
+
+.hero-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure text is above the background */
+}
+
 .hero-text {
-    font-size: 5em; /* Increase the font size */
+    font-size: 6em; /* Increase the font size */
     font-family: 'Shadows Into Light', cursive;
+    font-weight: bold; /* Make the text bold */
     opacity: 1; /* Initially visible */
     cursor: pointer; /* Change cursor to pointer to indicate interactivity */
-    z-index: 1; /* Ensure text is above the background */
+    color: white; /* Ensure the text color is white */
+    pointer-events: auto; /* Ensure the text is not affected by pointer events */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add a subtle but dark shadow */
 }
 
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .hero-text {
-        font-size: 5em; /* Larger font size for tablets and desktops */
+        font-size: 7em; /* Larger font size for tablets and desktops */
     }
 }
 

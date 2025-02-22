@@ -1,1 +1,0 @@
-// No JavaScript needed for the hero section at this time
