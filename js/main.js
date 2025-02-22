@@ -5,4 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('myButton').addEventListener('click', function() {
         alert('Button was clicked!');
     });
+
+    // Initialize Fancybox for the design gallery
+    $('[data-fancybox="gallery"]').fancybox();
+    $('[data-fancybox="design-gallery"]').fancybox(); // Add this line to initialize Fancybox for the design gallery
 });
