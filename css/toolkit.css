@@ -1,15 +1,15 @@
 #toolkit {
-    background-color: var(--secondary-color); /* Change background color to tan */
-    padding: 20px; /* Add padding to the section */
+    background-color: var(--secondary-color);
+    padding: 20px;
     display: flex;
-    flex-direction: column; /* Arrange content vertically */
-    justify-content: space-between; /* Distribute space between the areas */
-    align-items: center; /* Center the content horizontally */
-    height: 100vh; /* Ensure the section takes up the full viewport height */
-    border: none; /* Remove the original border */
-    border-radius: 0; /* Change border radius to 0 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better distinction */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Ensure the section takes up at least the full viewport height */
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .content {
@@ -17,15 +17,19 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    width: 100%; /* Ensure the content takes up the full width */
-    height: calc(100% - 60px); /* Ensure the content takes up the full height minus the padding and margin */
+    width: 100%;
+    height: auto; /* Allow the content to adjust its height based on the iframes */
 }
 
-.left-area, .right-area {
-    flex: 1;
+.left-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .right-area {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -33,12 +37,22 @@
 
 .top-right-area, .bottom-right-area {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 iframe {
     width: 100%;
-    height: 300px;
     border: none;
+}
+
+.left-area iframe {
+    height: 90vh; /* Ensure the left area iframe takes up most of the height */
+}
+
+.right-area iframe {
+    height: 40.5vh; /* Ensure the right area iframes take up half the height each */
 }
 
 .download-button {
@@ -57,4 +71,13 @@ iframe {
 
 .download-button .button:hover {
     background-color: var(--secondary-color);
+}
+
+.centered-title {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative; /* Ensure the title is positioned relative to other elements */
+    z-index: 1; /* Ensure the title is above other elements */
+    color: var(--accent-color); /* Match the color of the photo title */
 }
