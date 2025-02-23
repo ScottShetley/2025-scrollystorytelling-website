@@ -33,6 +33,16 @@
     height: 100%;
     object-fit: cover; /* Ensure the image covers the entire item, potentially cropping */
     border-radius: 5px; /* Match the border radius of the bento item */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0; /* Initially hidden */
+}
+
+.bento-item img.loaded {
+    opacity: 1; /* Fade in when loaded */
+}
+
+.bento-item img:hover {
+    transform: scale(1.05); /* Micro-zoom on hover */
 }
 
 /* Define different sizes for the grid items */
