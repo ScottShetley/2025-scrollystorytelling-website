@@ -51,4 +51,17 @@ document.addEventListener('DOMContentLoaded', function() {
             img.classList.add('loaded');
         }
     });
+
+    // Handle random rotation on hover
+    const designImages = document.querySelectorAll('.reverse-bento-item img');
+    designImages.forEach(img => {
+        img.addEventListener('mouseover', function() {
+            const randomRotation = Math.random() > 0.5 ? 3 : -3; // Randomly choose between 3deg and -3deg
+            img.style.transform = `scale(1.05) rotate(${randomRotation}deg)`;
+        });
+
+        img.addEventListener('mouseout', function() {
+            img.style.transform = 'scale(1) rotate(0deg)'; // Reset the transform on mouse out
+        });
+    });
 });
